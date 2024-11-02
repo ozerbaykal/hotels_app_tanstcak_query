@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <header className="border-b">
 
-            <Container designs="p-5 justify-between">
+            <Container designs="flex justify-between">
                 <div className="flex gap-10 items-center">
                     <h1 className="font-bold text-xl md:text-3xl text-blue-950">Tripster</h1>
 

@@ -9,16 +9,19 @@ const App = () => {
 
 
     <BrowserRouter>
-      <Header />
-      <Routes>
+      <div className="flex-1 h-screen bg-amber-100 bg-transparent" >
+        <Header />
+        <Routes>
 
-        <Route path="/" element={<Home />} />
-        <Route path="/create" element={<Create />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/create" element={<Create />} />
 
-        <Route path="/place/:id" element={<Detail />} />
+          <Route path="/place/:id" element={<Detail />} />
 
-      </Routes>
+        </Routes>
+      </div>
     </BrowserRouter>
+
   )
 }
 
