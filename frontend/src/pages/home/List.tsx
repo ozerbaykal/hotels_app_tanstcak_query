@@ -4,12 +4,21 @@ import { Place } from "../../types";
 import Loader from "../../components/loader";
 import Error from "../../components/error";
 import Card from "../../components/card";
+import { Params, useSearchParams } from "react-router-dom";
 
 const List = () => {
+    //url deki parametleri al ve nesne haline getir
+    const [params] = useSearchParams()
+    const paramsObj = Object.fromEntries(params.entries())
+
+
+
+
     const { isLoading, error, data, refetch } = useQuery<Place[]>({
-        queryKey: ["places"],
-        queryFn: getPlaces,
+        queryKey: ["places", paramsObj],
+        queryFn: () => getPlaces(paramsObj as Params),
     });
+
 
 
     return (
