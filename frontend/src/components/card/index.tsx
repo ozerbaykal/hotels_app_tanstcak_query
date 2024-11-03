@@ -26,7 +26,7 @@ const Card = ({ place }: Props) => {
                     </div>
                     <p>{place.location}</p>
                     <div className="flex gap-4">
-                        {place.amenities.slice(0, 2).map((i, key) => (<span className="border bg-blue-50 p-1 rounded-md" key={key}>{i}</span>))}
+                        {place.amenities.slice(0, 2).map((i, key) => (<span className="border bg-amber-100 p-1 rounded-md" key={key}>{i}</span>))}
                     </div>
                     <Rating point={place.rating} />
 
