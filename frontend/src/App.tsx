@@ -3,6 +3,8 @@ import Home from "./pages/home"
 import Create from "./pages/create"
 import Detail from "./pages/detail"
 import Header from "./components/header"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return (
@@ -10,6 +12,7 @@ const App = () => {
 
     <BrowserRouter>
       <div className="flex-1 bg-amber-50 bg-transparent" >
+        <ToastContainer />
         <Header />
         <Routes>
 

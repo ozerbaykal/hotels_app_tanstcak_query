@@ -55,7 +55,7 @@ export const inputs = [
         placeholder: "açıklma giriniz"
     },
     {
-        label: "Özellikler",
+        label: "Özellikler( , ile ayırınız )",
         name: "amenities",
         placeholder: "özellikleri giriniz"
     },

@@ -1,6 +1,7 @@
 
 import axios from "axios"
 import { Params } from "react-router-dom"
+import { PlaceData } from "../types"
 
 
 
@@ -13,8 +14,5 @@ export const getPlaces = (params: Params) =>
 
 
 
-// export const getPlace = () => {
-//     api.get("/api/places/id")
-
-
-// }
+//konaklama yeri oluşturma fonksiyonu
+export const createPlace = (body: PlaceData) => api.post("/api/places", body)

@@ -2,14 +2,39 @@ import { Field, Form, Formik } from "formik"
 import Container from "../../components/container"
 import { initial, inputs } from "../../constants"
 import { PlaceData } from "../../types"
+import { useMutation } from "@tanstack/react-query"
+import { createPlace } from "../../api"
+import { useNavigate } from "react-router-dom"
+import { toast } from "react-toastify"
 
 const Create = () => {
+    const navigate = useNavigate()
+
+    const { isPending, mutate } = useMutation({
+
+        mutationFn: (body: PlaceData) => createPlace(body),
+
+        onSuccess: (res) => {
+            toast.success("Konaklama Noktası Oluşturuldu")
+            navigate(`/place/${res.data.place.id}`)
+        },
+
+        onError: () => {
+            toast.error("işlem başarısız oldu")
+        }
+
+    })
+
     const handleSubmit = (values: PlaceData) => {
+
         //kopyasını oluştur
         const body = { ...values };
 
         //özellikler metnini (,) göre diziye çevir
         body.amenities = (values.amenities as string).split(",");
+
+        //apiye istek at
+        mutate(body)
 
 
 
@@ -22,8 +47,8 @@ const Create = () => {
         <Container>
             <Formik initialValues={initial} onSubmit={handleSubmit}>
                 <Form className="max-w-2xl mx-auto grid gap-5" >
-                    {inputs.map((item) => (
-                        <div className="flex flex-col gap-3">
+                    {inputs.map((item, key) => (
+                        <div key={key} className="flex flex-col gap-3">
                             <label className="font-bold">{item.label}</label>
                             <Field
                                 type={item.type || "text"}
