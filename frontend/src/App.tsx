@@ -9,7 +9,7 @@ const App = () => {
 
 
     <BrowserRouter>
-      <div className="flex-1 h-screen bg-amber-100 bg-transparent" >
+      <div className="flex-1 bg-amber-50 bg-transparent" >
         <Header />
         <Routes>
 

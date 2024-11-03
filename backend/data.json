@@ -15,7 +15,7 @@
     "rating": 2.8,
     "price_per_night": 150,
     "availability": true,
-    "image_url": "/pic1.jpg"
+    "image_url": "/oda1.jpg"
   },
   {
     "id": 2,
@@ -32,7 +32,7 @@
     "rating": 4.5,
     "price_per_night": 120,
     "availability": true,
-    "image_url": "/pic2.webp"
+    "image_url": "/oda2.jpg"
   },
   {
     "id": 3,
@@ -49,7 +49,7 @@
     "rating": 4.2,
     "price_per_night": 90,
     "availability": false,
-    "image_url": "/pic3.jpg"
+    "image_url": "/oda3.png"
   },
   {
     "id": 4,
@@ -66,7 +66,7 @@
     "rating": 4.9,
     "price_per_night": 200,
     "availability": true,
-    "image_url": "/pic4.jpg"
+    "image_url": "/oda6.jpg"
   },
   {
     "id": 5,
@@ -83,7 +83,7 @@
     "rating": 3.8,
     "price_per_night": 25,
     "availability": true,
-    "image_url": "/pic5.webp"
+    "image_url": "/oda4.jpg"
   },
   {
     "name": "Havuzlu Villa",
@@ -95,6 +95,6 @@
     "price_per_night": 350,
     "availability": true,
     "id": "0d5d1ad2-b484-443f-b8c5-c578138d90e7",
-    "image_url": "https://picsum.photos/429/429"
+    "image_url": "oda5.jpg"
   }
 ]
