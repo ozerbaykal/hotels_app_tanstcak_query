@@ -8,6 +8,7 @@ import Error from "../../components/error";
 import Buttons from "./Buttons";
 import Rating from "../../components/card/Rating";
 import Features from "./Features";
+import Status from "../../components/card/Status";
 
 const Detail = () => {
     const { id } = useParams();
@@ -38,6 +39,14 @@ const Detail = () => {
 
 
                         <Features arr={data.amenities} />
+                        <div className="flex justify-between gap-2 items-center font-semibold">
+                            <p className="text-blue-950 text-xl font-semibold">
+                                ${data.price_per_night}
+                                <span className="text-sm text-gray-600">/gece</span>
+                            </p>
+                            <Status availability={data.availability} expand />
+
+                        </div>
                     </div>
 
 

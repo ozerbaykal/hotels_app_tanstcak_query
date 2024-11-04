@@ -8,7 +8,9 @@ const Header = () => {
 
             <Container designs="flex justify-between">
                 <div className="flex gap-10 items-center">
-                    <h1 className="font-bold text-xl md:text-3xl text-blue-950">Tripster</h1>
+                    <Link to={"/"}>
+                        <h1 className="font-bold text-xl md:text-3xl text-blue-950">Tripster</h1></Link>
+
 
                     <nav className="flex gap-5 items-center">
                         <Link to="/">Oteller </Link>
